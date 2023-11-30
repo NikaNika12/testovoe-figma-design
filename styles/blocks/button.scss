@@ -1,0 +1,30 @@
+.button {
+  display: none;
+
+  @include onDesktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 262px;
+    height: 61px;
+    background-color: $buttonColor;
+    border-color: transparent;
+
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: $textColor;
+    cursor: url(../images/icon-cursor.svg), auto;
+
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+    }
+  
+    &:active {
+      border-color: white;
+    }
+  }  
+}

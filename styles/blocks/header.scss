@@ -1,0 +1,131 @@
+.header {
+  @include onDesktop {
+    margin-bottom: 90px;
+  }
+
+  &__left {
+    justify-self: start;
+    width: 140px;
+  }
+
+  &__right {
+    display: flex;
+    gap: 47px;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 11px;
+    margin-left: 137px;
+  }
+
+  &__logo {
+    cursor: url(../images/icon-cursor.svg), auto;
+
+    &__image {
+      height: 19px;
+      width: 128px;
+
+      @include onDesktop {
+        height: 24px;
+        width: 140px;
+        padding-top: 11px;
+      }
+    }
+  }
+
+  &__text {
+    width: 165px;
+    height: 24px;
+    padding-top: 10px;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    text-decoration: none;
+  }
+
+  &__desktop {
+    padding: $headerTopPading 0 0;
+    display: none;
+    justify-content: space-between;
+
+    @include onDesktop {
+      display: flex;
+    }
+  }
+
+  &__mobile {
+    display: block;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+
+    @include onDesktop {
+      margin: 0 0 0 52px;
+      padding: 11px 0 0 0;
+      width: 503px;
+    }
+
+    &__link {
+      display: inline-block;
+      text-decoration: none;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: $textColor;
+      text-transform: uppercase;
+  
+      @include onDesktop {
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: none;
+      }
+  
+      &::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: #FCB045;
+        border-radius: 4px;
+        display: block;
+        transition: width 0.3s ease-in-out;
+      }
+  
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__telephone {
+    width: 143px;
+    padding: 0;
+    
+    &__text {
+      text-decoration: none;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: $textColor;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    align-items: start;
+  }
+}
